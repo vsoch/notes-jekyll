@@ -19,7 +19,7 @@ jobs:
         rm -rf _site/*
         docker run --rm \
             -v "$PWD:/srv/jekyll" -v "$PWD/_site:/srv/jekyll/_site" \
-               jekyll/builder:4.0 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+               jekyll/builder:4.0 /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future && chmod -R 777 /srv/jekyll"
 
     - name: Deploy
       if: github.ref == 'refs/heads/main'
@@ -30,7 +30,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git checkout -b gh-pages || git checkout gh-pages
-        ls -Q | grep -v _site | xargs rm -rf
+        ls -Q | grep -v _site | xargs rm -rf        
         mv _site/* .
         rm -rf _site
         rm -rf .jekyll-cache
