@@ -4,11 +4,11 @@ css: ["page.css"]
 ---
 
 <header>
-	{% if page.toc %}
-		{% include header-wTOC.html %}
-	{% else %}
-		{% include header-wtTOC.html %}
-	{% endif %}
+  {% if page.toc %}
+    {% include header-toc.html %}
+  {% else %}
+    {% include header.html %}
+  {% endif %}
 </header>
 <main>
 	<div class="container">
@@ -17,9 +17,6 @@ css: ["page.css"]
 		</div>
 		<div class="row">
 			{{ content }}
-			{% if site.disqus_shortname and page.comment %}
-			  {% include disqus.html %}
-			{% endif %}
 		</div>
 	</div>
 </main>

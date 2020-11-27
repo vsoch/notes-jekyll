@@ -6,9 +6,9 @@ js: ["post.js"]
 
 <header>
   {% if page.toc %}
-    {% include header-wTOC.html %}
+    {% include header-toc.html %}
   {% else %}
-    {% include header-wtTOC.html %}
+    {% include header.html %}
   {% endif %}
 </header>
 <main>
@@ -48,9 +48,5 @@ js: ["post.js"]
     </div>
     {% include related-posts.html %}
     {% include search_form.html %}
-
-    {% if site.disqus_shortname and page.comment %}
-      {% include disqus.html %}
-    {% endif %}
   </div>
 </main>

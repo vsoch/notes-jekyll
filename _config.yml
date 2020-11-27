@@ -1,31 +1,32 @@
-title: NoteTheme
-description: You cannot remember everything.
-baseurl: "/notetheme"
+title: notes-jekyll
+description: I want to write it down, and for it to be pretty.
+baseurl: "/notes-jekyll"
 url: ""
-repository: dinhanhthi/notetheme
+repository: vsoch/notes-jekyll
 paginate: 28
 
-banner: "/assets/res/banner.png" # site banner (load when someone share your page url)
-favicon: "/assets/res/favicon.png" # site's favicon (icon left side of your page)
+banner: "/assets/img/banner.png" # site banner (load when someone share your page url)
+favicon: "/assets/img/favicon.ico" # site's favicon (icon left side of your page)
+
+# Collections
+collections:
+  papers:
+    output: true
+    permalink: /:collection/:path
+    collections_dir: papers
 
 # MatJek specific configurations
 user: 
-  name: "Math2IT"
-  email: "dinhanhthimail@gmail.com"
-  website: "math2it.com"
-  avatar: "/assets/res/user.png"
-  github: "dinhanhthi"
-google_tracking_id: ""
-google_site_verification: ""
-disqus_shortname: this-site
+  avatar: "/assets/img/logo.png"
+  github: "vsoch"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title
 
-
-gems:
+plugins:
+  - jekyll-scholar
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
@@ -37,7 +38,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-sass:
-  style: compressed
-
-  future: true
+scholar:
+  style: _bibliography/my-ieee.cls
+  bibliography: references.bib

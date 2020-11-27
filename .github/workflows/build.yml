@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches-ignore:
+    - gh-pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: main
+    - name: Build Jekyll site
+      run: |
+        set -xo pipefail
+        rm -rf _site/*
+        docker run --rm -v "$PWD:/srv/jekyll" --user $(id -u):$(id -g) -i martinopilia/m-pilia.github.io:latest jekyll build
+    - name: Deploy
+      if: github.ref == 'refs/heads/main'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        set -xo pipefail
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git checkout gh-pages
+        ls -Q | grep -v _site | xargs rm -rf
+        mv _site/* .
+        rm -rf _site
+        rm -rf .jekyll-cache
+        [[ -n "$(git status --porcelain)" ]] || exit 0
+        git add .
+        git commit -m "Build $(git rev-parse source | grep -o '^.\{10\}')"
+        git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
