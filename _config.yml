@@ -14,6 +14,10 @@ collections:
     output: true
     permalink: /:collection/:path
     collections_dir: papers
+  paper-details:
+    output: true
+    permalink: /:collection/:path
+    collections_dir: paper-details
 
 # MatJek specific configurations
 user: 
@@ -41,3 +45,12 @@ exclude:
 scholar:
   style: _bibliography/my-ieee.cls
   bibliography: references.bib
+# TODO need to figure out how to add prefix here
+  bibliography_template: bibitem-template
+  repository: papers
+  details_dir: "paper-details"
+  details_layout: "details.html"
+#  details_permalink: "/notes-jekyll/:details_dir/:key:extension"
+# Ensure that details are not printed twice
+  details_link: ""
+

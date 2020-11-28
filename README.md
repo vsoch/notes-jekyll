@@ -50,6 +50,8 @@ from the repositories where it originates from.
 ## TODO
 
 - Need to add pdfs for each paper example
+- format bibtex
+- add fun image to 404 page
 - We want to be able to click on a reference on any page and open the PDF
 - We also want a link for each reference that shows all the places it's cited (harder)
 - create usage guide
