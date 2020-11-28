@@ -1,0 +1,23 @@
+---
+layout: page
+---
+<html>
+<head></head>
+<body>
+  <h6>{{ page.entry.author }}</h6>
+  <p><a href="{{ site.baseurl }}/papers/{{ page.entry.key }}.pdf" target="_blank">PDF</a></a>
+  <p>{{ page.entry.abstract }}</p>
+
+
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+{{ page.entry.bibtex }}
+</code>
+</pre>
+</div>
+</div>
+
+</body>
+</html>

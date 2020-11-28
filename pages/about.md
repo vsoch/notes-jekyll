@@ -49,6 +49,12 @@ if I type:
 {% raw %}{% cite metz2011nonrigid %}{% endraw %}
 ```
 
+If you want to cite a particular set of pages or lines, you can do:
+
+```
+{% raw %}{% cite metz2011nonrigid --locator 23-5 %}{% endraw %}
+```
+
 And then I can include the entire list of references, usually at the end of the page, as follows:
 
 ```
@@ -57,7 +63,22 @@ And then I can include the entire list of references, usually at the end of the 
 
 You can remove the `--cited` to include all references, regardless of being mentioned or
 not. And then I can easily render the citation {% cite hinsen2019dealing %}.
-You should be able to click that and be taken to the references at the bottom.
+Or make a citation that references lines {% cite metz2011nonrigid --locator 23-5 %}.
+You should be able to click either of those numbers and be taken to the references at the bottom.
+
+##### References
+
+In the same spirit as the above, you can print the reference for any particular citation
+as follows:
+
+```
+{% raw %}{% reference metz2011nonrigid %}{% endraw %}
+```
+
+That renders to the following (and note the class is "citation" if you want to edit the
+style):
+
+{% reference metz2011nonrigid %}
 
 ##### Quotes
 

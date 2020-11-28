@@ -12,11 +12,19 @@ comment: 1
 
 ## Section I
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec dui nunc mattis. Leo vel orci porta non pulvinar neque laoreet. Dui nunc mattis enim ut tellus elementum sagittis vitae et {% cite metz2011nonrigid %}. Adipiscing commodo elit at imperdiet dui accumsan sit. Nibh tortor id aliquet lectus. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Lectus arcu bibendum at varius vel pharetra vel turpis. Porta lorem mollis aliquam ut porttitor leo. Malesuada fames ac turpis egestas. Turpis massa tincidunt dui ut ornare lectus sit. Consectetur adipiscing elit ut aliquam. Et malesuada fames ac turpis egestas maecenas pharetra convallis {% cite huizinga2016pca %}.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec dui nunc mattis. Leo vel orci porta non pulvinar neque laoreet. Dui nunc mattis enim ut tellus elementum sagittis vitae et {% cite metz2011nonrigid --locator 23-5 %}. Adipiscing commodo elit at imperdiet dui accumsan sit. Nibh tortor id aliquet lectus. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Lectus arcu bibendum at varius vel pharetra vel turpis. Porta lorem mollis aliquam ut porttitor leo. Malesuada fames ac turpis egestas. Turpis massa tincidunt dui ut ornare lectus sit. Consectetur adipiscing elit ut aliquam. Et malesuada fames ac turpis egestas maecenas pharetra convallis {% cite huizinga2016pca %}.
 
 ### Sub Section A
 
 Consequat ac felis donec et odio. Non odio euismod lacinia at quis risus sed. At quis risus sed vulputate odio ut enim blandit. Hac habitasse platea dictumst vestibulum rhoncus est. Facilisi nullam vehicula ipsum a arcu cursus vitae congue. Consequat interdum varius sit amet. Nibh sit amet commodo nulla {% cite wang2008simultaneous %}. Sed libero enim sed faucibus turpis. Malesuada pellentesque elit eget gravida. Viverra mauris in aliquam sem. Velit laoreet id donec ultrices tincidunt arcu non sodales. Bibendum est ultricies integer quis auctor elit sed. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat.
+
+{% quote metz2011nonrigid %}
+This is an example of a cited quote.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing.
+{% endquote %}
 
 Suspendisse sed nisi lacus sed viverra tellus in. Cum sociis natoque penatibus et magnis {% cite chen2010group %}. Facilisis gravida neque convallis a cras semper auctor. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. At tellus at urna condimentum mattis pellentesque id nibh tortor. Dictum non consectetur a erat nam at. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Neque sodales ut etiam sit amet nisl purus in mollis {% cite klein2010elastix %}. Vulputate sapien nec sagittis aliquam. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Justo donec enim diam vulputate ut pharetra sit. Eget dolor morbi non arcu risus quis varius quam.
 
