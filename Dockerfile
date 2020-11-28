@@ -1,5 +1,7 @@
 FROM jekyll/jekyll:4.1.0
 
+# docker build -t notes-jekyll .
+
 WORKDIR /srv/jekyll
 COPY Gemfile .
 COPY Gemfile.lock .

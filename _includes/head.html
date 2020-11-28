@@ -14,7 +14,7 @@
     {% if page.title %}
       {{ page.title | escape }} | {{ site.title }}
     {% else %}
-      {{ site.title | escape }} | You cannot remember everything
+      {{ site.title | escape }} | {{ site.description }}
     {% endif %}
   </title>
 
@@ -46,8 +46,9 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/thi_scss.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet"> 
 
   {% for css in layout.css %}
     {% if css contains "//" %}

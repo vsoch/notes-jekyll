@@ -15,7 +15,9 @@ This is a Jekyll template that will make it easy to:
 3. Push to the main branch and trigger a build for GitHub pages
 4. Search or otherwise interact with the interface
 
-Each point is explained in more detail below.
+Each point is explained in more detail below, and if you want more instructions for
+overall site configuration, see [the repository README](https://github.com/vsoch/notes-jekyll/#notes-jekyll).
+
 
 #### 1. References
 
@@ -26,6 +28,7 @@ By default, you should expect the name of the paper pdf to match the name of the
 (and BibDesk will do this automatically for you, this is called "AutoFile") and it's
 suggested to do a format like `papers/%f{Cite Key}`. You can also just add citations
 and papers manually, it's up to you!
+
 
 #### 2. How to take notes
 
@@ -39,6 +42,7 @@ I chose this approach because I like writing in Markdown.
 While we could investigate solutions to run a web server and render a PDF, the simpler
 approach of using Markdown will likely be more comfortable for users with different
 editor preferences.
+
 
 ##### Citations
 
@@ -66,6 +70,7 @@ not. And then I can easily render the citation {% cite hinsen2019dealing %}.
 Or make a citation that references lines {% cite metz2011nonrigid --locator 23-5 %}.
 You should be able to click either of those numbers and be taken to the references at the bottom.
 
+
 ##### References
 
 In the same spirit as the above, you can print the reference for any particular citation
@@ -79,6 +84,7 @@ That renders to the following (and note the class is "citation" if you want to e
 style):
 
 {% reference metz2011nonrigid %}
+
 
 ##### Quotes
 
@@ -105,4 +111,70 @@ Lorem ipsum dolor sit amet, consectetur adipisicing.
 
 {% bibliography --cited %}
 
-More detail will be added here as the theme is developed!
+<fieldset class="field-set" markdown="1">
+<legend class="leg-title">Examples</legend>
+For an example post see the <a href="https://vsoch.github.io/notes-jekyll/registration">Registration</a> example page,
+and the <a href="https://vsoch.github.io/notes-jekyll/how-to-write-notes">How to Write Notes</a> page
+for formatting examples.</span>
+</fieldset>
+
+
+#### 3. How to organize notes
+
+I would expect to create a post for each topic, and then reference the relevant papers
+within it to create a list of references at the bottom that are a subset of your references.
+This is fairly easy to do starting with an existing page as a template, or the empty
+example below:
+
+```yaml
+---
+title: How to write notes
+categories: [about]
+tags: [jekyll]
+datacamp: 1
+maths: 1
+toc: 1
+---
+{% raw %}
+{% cite keyToReference %}
+
+{% quote metz2011nonrigid %}
+This is an example of a cited quote.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing.
+{% endquote %}
+
+<hr>
+
+{% bibliography --cited %}
+{% endraw %}
+```
+
+You can generally organize your notes posts however you like, and make a citation where appropriate.
+
+##### Tags and Categories
+
+Tags are a strategy for grouping notes. For example, I might tag notes with authors, or other relevant
+metadata.  You can add a list of tags to any post front end matter as follows:
+
+```yaml
+tags: [vsoch,manbat]
+```
+
+You don't need to define tags a-priori - they will render regardless. For categories,
+you'll need to edit the `_data/categories.yml` file to add names and slugs. A category
+is more appropriate for grouping information. For example, for the dummy papers here,
+I might have a category of registration. You can also define categories in front end matter:
+
+```yaml
+categories: [registration]
+```
+
+A single string should work as well.
+
+## Support
+
+If you have any questions or want to request a feature, please don't hesitate
+to [open an issue](https://github.com/vsoch/notes-jekyll/issues). 

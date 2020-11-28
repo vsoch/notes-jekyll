@@ -1,13 +1,11 @@
 ---
 title: How to write notes
-categories: [about]
+categories: [notes-jekyll]
 tags: [jekyll]
 datacamp: 1
 maths: 1
 toc: 1
 ---
-
-{% include tip.html content="This guide will give you an overview of how to format notes." %}
 
 {% include toc.html %}
 
@@ -134,24 +132,22 @@ If you want to then use it
 [Caption]({{ post.url }}#your-id)
 {% endraw %} ~~~
 
-### Insert toc (table of contents)
+### Insert toc (Table of Contents)
 
-Insert this line
+There are actually two choices for the Table of contents! You can add one manually (as
+you see to the right, here):
 
-~~~ {% raw %}
-{% include toc.html %}
-{% endraw %} ~~~
+```
+{% raw %}{% include toc.html %}{% endraw %}
+```
 
-### Insert heading only on toc (not display it on the post)
+And you can also see the one generated in the left sidebar via the front end matter:
 
-Use the class `notdisplay`,
+```yaml
+toc: 1
+```
 
-~~~ {% raw %}
-{:.notdisplay}
-# Hidden deading
-{% endraw %} ~~~
-
-### Make columns for a list
+### Make a list into columns
 
 Put the list inside a `<div>` tag like,
 
@@ -166,7 +162,7 @@ Put the list inside a `<div>` tag like,
 </div>
 {% endhighlight %}
 
-Results,
+And the result looks like this - notice how we span two colums!
 
 <div class="thi-columns" markdown="1">
 - item 1
@@ -232,8 +228,11 @@ Content in step 2
 
 ## Mathematical expressions
 
-- Inline math, use `$math-expression$`
-- Block of math, use `$$math block$$` or 
+### Inline math
+For inline math, use `$math-expression$`
+
+### Block
+For an entire block, you can use `$$math block$$` or 
 
 	~~~ latex
 	$$
@@ -241,18 +240,24 @@ Content in step 2
 	$$
 	~~~
 
-If you want to insert some special characters, you must put `\` before this character, for instance, `\\{ 1,2,3 \\}` gives $\\{ 1m2,3 \\}$ <br>
-If you type inline maths that contain chatacters `_`, you must add `\` before each of them, for example, `a\_1` give $a\_1$. <br>
-Don't use `||` for absolute values, let's use `\vert \vert` instead. <br>
-Don't use `\left\| \right\|` for norms, use `\Vert \Vert` instead. <br>
-Don't use `*` for star symbols, use `\ast` instead. <br>
-If you want to type `\\`, type `\\\\` instead. <br>
+#### Special Characters
+If you want to insert some special characters, you must put `\` before this character, for instance, `\\{ 1,2,3 \\}` gives $\\{ 1m2,3 \\}$
+
+**Tips**
+ - If you type inline math that contains characters `_`, you must add `\` before each of them, for example, `a\_1` give $a\_1$.
+ - Don't use `||` for absolute values, let's use `\vert \vert` instead.
+ - Don't use `\left\| \right\|` for norms, use `\Vert \Vert` instead.
+ - Don't use `*` for star symbols, use `\ast` instead.
+ - If you want to type `\\`, type `\\\\` instead.
+
+#### Matrices
 If you want to type an inline matrix, e.g., $[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix}$, type like below,
 
 	~~~ latex
 	$[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix},$
 	~~~
 
+#### Labels
 In order to use `\label{}` and `\eqref{}` like in latex, use
 
 	~~~ latex
@@ -265,7 +270,7 @@ In order to use `\label{}` and `\eqref{}` like in latex, use
 	Call again equation $\eqref{eq1}$.
 	~~~
 
-	which gives
+The above renders to:
 
 	$$
 	\begin{align}\tag{1}\label{eq1}
@@ -290,7 +295,8 @@ You don't need an enviroment `align` or `equation` to use `\label`, you can use 
 
 ### Theorem boxes
 
-Use these lines of code
+A theorum box is a nice little callout to highlight some special text. You
+can create one as follows:
 
 {% highlight html %}
 <div class="thi-box" markdown="1">
@@ -303,7 +309,7 @@ Content
 </div>
 {% endhighlight %}
 
-which gives
+which renders into:
 
 <div class="thi-box" markdown="1">
 <div class="box-title" markdown="1">
@@ -346,39 +352,39 @@ You even can embed **R/Python** code environment inside a post like this.
 
 ### Notification boxes
 
-Use these lines of code
+A notification box is useful to draw the eyes of the reader to important content.
+You could create a warning, for example, like this:
 
 ~~~ {% raw %}
 {% include warning.html content="Warning's content" %}
 {% endraw %} ~~~
 
-which give
+Rendered it looks like the following:
 
 {% include warning.html content="Warning's content" %}
 
-Use these lines of code
+There is another style for information:
 
 ~~~ {% raw %}
 {% include tip.html content="Info's content" %}
 {% endraw %} ~~~
 
-which give
+which renders to:
 
 {% include tip.html content="Info's content" %}
 
 
+### Insert Accordian
 
-### Insert hide/show box
-
-<div class="row d-flex" markdown="1">
-<div class="col s12 l6" markdown="1">
+An accordian menu hides some content, and the user can click to reveal it. It's
+best to use an icon on it that suggests that the user should click, like an arrow.
 
 Use these lines of code
 
 ~~~ html
 <ul class="collapsible" data-collapsible="accordion">
 <li>
-<div class="collapsible-header" markdown="1"><i class="material-icons">face</i>
+<div class="collapsible-header" markdown="1"><i class="material-icons">expand_more</i>
 Title
 </div>
 <div class="collapsible-body" markdown="1">
@@ -388,14 +394,11 @@ Content
 </ul>
 ~~~
 
-</div>
-<div class="col s12 l6" markdown="1">
-
-which give
+The above renders into an expandable section:
 
 <ul class="collapsible" data-collapsible="accordion">
 <li>
-<div class="collapsible-header" markdown="1"><i class="material-icons">face</i>
+<div class="collapsible-header" markdown="1"><i class="material-icons">expand_more</i>
 Title
 </div>
 <div class="collapsible-body" markdown="1">
@@ -404,15 +407,15 @@ Content
 </li>
 </ul>
 
-</div>
-</div>
-
-
 ### Insert blockquote
+
+A blockquote is a nice style to show a quote, for example:
 
 <p class="post-more-info" markdown="1">
 The content of extra info of the post.
 </p>
+
+And you can generate the above as follows:
 
 {% highlight html %}
 <p class="post-more-info" markdown="1">
@@ -422,12 +425,10 @@ The content of extra info of the post.
 
 > Other normal blockquote like this.
 
-### Insert resume of the post
+### Summary block
 
-<div class="row d-flex" markdown="1">
-<div class="col s12 l6" markdown="1">
-
-Use these lines of code
+A summary block has a title, and then some content, and is another strategy
+to point out more salient information. If you use these lines of code:
 
 {% highlight html %}{%raw%}
 <fieldset class="field-set" markdown="1">
@@ -436,19 +437,12 @@ Content
 </fieldset>
 {%endraw%}{% endhighlight %}
 
-</div>
-<div class="col s12 l6" markdown="1">
-
-which give
+You can then generate:
 
 <fieldset class="field-set" markdown="1">
 <legend class="leg-title">Title</legend>
 Content
 </fieldset>
-
-</div>
-</div>
-
 
 {:#cat-tag}
 ## Categories and tags
@@ -606,25 +600,6 @@ Content
 ~~~
 
 ## Others
-
-### Add toc
-
-~~~ {% raw %}
-{% include toc.html %}
-{% endraw %} ~~~
-
-### Columns for lists
-
-~~~{% raw %} html
-<div class="thi-columns" markdown="1">
-- item 1
-- item 2
-- item 3
-- item 4
-- item 5
-- item 6
-</div>
-{% endraw %}~~~
 
 ### Side by side
 
