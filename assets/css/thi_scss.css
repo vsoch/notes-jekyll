@@ -28,22 +28,37 @@
 }
 h1 {
     font-size: 2.6rem;
-    font-weight: 500;
+    font-weight: bold;
+    margin: 6rem 0 1rem 0;
 }
 h2 {
     font-size: 2.3rem;
-    font-weight: 500;
-    margin: 1.2rem 0 1rem 0;
+    font-weight: bold;
+    margin: 5rem 0 1rem 0;
 }
 h3 {
     font-size: 1.8rem;
-    font-weight: 500;
-    margin: 2rem 0 1rem 0;
+    font-weight: bold;
+    margin: 5rem 0 1rem 0;
 }
 h4 {
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 5rem 0 1rem 0;
 }
+
+h4 {
+    margin: 4rem 0 1rem 0;
+}
+
+h5 {
+    margin: 3.5rem 0 1rem 0;
+}
+
+h6 {
+    margin: 3.0rem 0 1rem 0;
+}
+
 .thi-post h1 {
     counter-reset: h2counter;
 }
@@ -335,8 +350,13 @@ li > .thi-warning {
     }
 }
 html {
-    font-family: "Maven Pro", sans-serif;
-    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+}
+::placeholder {
+    color: #666;
 }
 .thi-signature {
     font-family: "Dancing Script", cursive;
@@ -357,7 +377,7 @@ html {
     color: #111;
 }
 a {
-    color: forestgreen;
+    color: #266ac1;
 }
 a:hover {
     text-decoration: none;
@@ -837,3 +857,8 @@ td {
     }
 }
 
+.pagination li.active a {
+    font-size: 25px;
+    font-weight: bold;
+    margin: auto;
+}

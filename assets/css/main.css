@@ -36,9 +36,9 @@ header .background {
     background: -webkit-linear-gradient(90deg, #0095bf 10%, #00537e 90%);
     background: linear-gradient(90deg, #0095bf 10%, #00537e 90%);
 }
+/* optional style for bibliography
 .bibliography {
-  padding-top: 60px;
-}
+}*/
 
 a.button-collapse.top-nav {
     position: absolute;

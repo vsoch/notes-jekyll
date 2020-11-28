@@ -17,8 +17,7 @@ js: ["post.js"]
       <h3>{{page.title}}</h3>
       <span>
         Posted on
-        <span style="display: initial;" class="cat-class">{{page.date | date: "%d/%m/%Y"}}</span>,
-        in
+        <span style="display: initial;" class="cat-class">{{page.date | date: "%d/%m/%Y"}}</span>
         {% for cat in page.categories %}
           {% for catDat in site.data.categories %}
             {% if catDat.slug == cat %}

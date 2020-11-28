@@ -131,7 +131,7 @@
       <else>
         <choose>
           <if variable="URL">
-            <text variable="URL" prefix="&lt;a href=&quot;" suffix="&quot;&gt;"/>
+            <text variable="URL"/>
             <text variable="title" quotes="true" suffix="&lt;/a&gt;"/>
           </if>
           <else>
