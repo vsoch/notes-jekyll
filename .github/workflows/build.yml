@@ -25,16 +25,23 @@ jobs:
       if: github.ref == 'refs/heads/main'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
       run: |
         set -xo pipefail
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git checkout -b gh-pages || git checkout gh-pages
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git checkout -b gh-pages || git checkout "${BRANCH}"
+        git branch
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git status
+
         ls -Q | grep -v _site | xargs rm -rf        
         mv _site/* .
         rm -rf _site
         rm -rf .jekyll-cache
         [[ -n "$(git status --porcelain)" ]] || exit 0
         git add .
+        git pull origin "${BRANCH}"
         git commit -m "Build $(git rev-parse source | grep -o '^.\{10\}')"
-        git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+        git push origin "${BRANCH}"
+
