@@ -35,7 +35,7 @@ and papers manually, it's up to you!
 Once you have your papers, you of course want to take notes! Basically, any post
 that you write under `_posts` will render into a page of notes. Any reference
 that you add to your references file will automatically render on the home page,
-and can be easily read from here (not implemented yet) or referenced in any page.
+and can be easily read from here or referenced in any page.
 
 The rederences will generally be available to cite anywhere in the site where you can write Markdown.
 I chose this approach because I like writing in Markdown.
@@ -173,6 +173,12 @@ categories: [registration]
 ```
 
 A single string should work as well.
+
+## Thanks
+
+This template would not be possible without [notetheme](https://github.com/dinhanhthi/notetheme) and the
+[jekyll-scholar](https://github.com/inukshuk/jekyll-scholar) plugin for citation management.
+Thank you!
 
 ## Support
 
