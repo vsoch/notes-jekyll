@@ -6,6 +6,8 @@ no LaTeX required here!) and render our notes on GitHub pages. The theme is base
 [notetheme](https://github.com/dinhanhthi/notetheme) and has added 
 [jekyll-scholar](https://github.com/inukshuk/jekyll-scholar) for citation management.
 
+![assets/img/home.png](assets/img/home.png)
+
 ## Getting started
 
  - [Add papers](#how-to-add-or-view-papers) either manually or with a citation manager
