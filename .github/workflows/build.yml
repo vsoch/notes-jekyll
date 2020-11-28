@@ -30,11 +30,11 @@ jobs:
         set -xo pipefail
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git checkout -b gh-pages || git checkout "${BRANCH}"
+        git rebase "origin/main"
         git branch
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
         git status
-        git pull origin "${BRANCH}"
 
         ls -Q | grep -v _site | xargs rm -rf        
         mv _site/* .
