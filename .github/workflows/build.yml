@@ -34,6 +34,7 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
         git status
+        git pull origin "${BRANCH}"
 
         ls -Q | grep -v _site | xargs rm -rf        
         mv _site/* .
@@ -41,7 +42,6 @@ jobs:
         rm -rf .jekyll-cache
         [[ -n "$(git status --porcelain)" ]] || exit 0
         git add .
-        git pull origin "${BRANCH}"
         git commit -m "Build $(git rev-parse source | grep -o '^.\{10\}')"
         git push origin "${BRANCH}"
 
