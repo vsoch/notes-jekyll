@@ -42,4 +42,4 @@ jobs:
         [[ -n "$(git status --porcelain)" ]] || exit 0
         git add .
         git commit -m "Build $(git rev-parse source | grep -o '^.\{10\}')"
-        git push origin "${BRANCH}"
+        git push origin "${BRANCH}" --force
