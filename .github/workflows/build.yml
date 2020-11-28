@@ -30,7 +30,6 @@ jobs:
         set -xo pipefail
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         git checkout -b gh-pages || git checkout "${BRANCH}"
-        git rebase "origin/main"
         git branch
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
@@ -44,4 +43,3 @@ jobs:
         git add .
         git commit -m "Build $(git rev-parse source | grep -o '^.\{10\}')"
         git push origin "${BRANCH}"
-
