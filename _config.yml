@@ -39,8 +39,11 @@ plugins:
   - jekyll-redirect-from
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
+ - Gemfile
+ - Gemfile.lock
+ - ./vendor/bundle
+ - vendor
+ - ./vendor
 
 scholar:
   style: _bibliography/my-ieee.cls
