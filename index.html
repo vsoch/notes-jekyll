@@ -1,63 +1,165 @@
----
-layout: page
-css: ["index.css"]
-permalink: /
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/notes-jekyll/assets/img/banner.png" />
 
-<div class="row">
+  
+
+  <title>
+    
+      notes-jekyll | I want to write it down, and for it to be pretty.
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/notes-jekyll/assets/img/favicon.ico">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/notes-jekyll/assets/css/main.css">
+  <link rel="stylesheet" href="/notes-jekyll/assets/css/thi_scss.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet"> 
+
+  
+    
+      <link rel="stylesheet" href="/notes-jekyll/assets/css/page.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/notes-jekyll/assets/css/index.css">
+    
+  
+
+  <link rel="stylesheet" href="/notes-jekyll/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes-jekyll/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/notes-jekyll/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="notes-jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I want to write it down, and for it to be pretty." />
+<meta property="og:description" content="I want to write it down, and for it to be pretty." />
+<link rel="canonical" href="/notes-jekyll/" />
+<meta property="og:url" content="/notes-jekyll/" />
+<meta property="og:site_name" content="notes-jekyll" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="notes-jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"I want to write it down, and for it to be pretty.","headline":"notes-jekyll","name":"notes-jekyll","url":"/notes-jekyll/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="slide-out" class="side-nav fixed">
+  <li>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/notes-jekyll/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/notes-jekyll/assets/img/napkins.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">notes-jekyll</span>
+      <span class="white-text email"><a style="color: white; font-weight:400" href="https://github.com/vsoch/notes-jekyll">vsoch/notes-jekyll</a></span>
+    </div>
+  </li>
+  <li style="padding: 10px;">
+    <form action="/notes-jekyll/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="Search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </li>
+  <div id="nav-bar">
+    <li><a class="waves-effect" href="/notes-jekyll/about">Getting Started</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="/notes-jekyll/">Home</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="/notes-jekyll/tags">Tags</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="/notes-jekyll/categories">Categories</a></li>
+  </div>
+</ul>
+
+  
+</header>
+<main>
+	<div class="container">
+	  <div id="page-info">
+		  <h2></h2>
+		</div>
+		<div class="row">
+			<div class="row">
 
   <div>
-    {% include search_form.html %}
+    <form action="/notes-jekyll/search" method="get">
+	<input type="search" name="q"  placeholder="Search for..." autofocus>
+	<input type="submit" value="Search" style="display: none;">
+</form>
+
   </div>
 
   <div class="thi-columns">
     <ul class="tag-post">
-    {% for post in paginator.posts %}
-      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+    
+      <a class="post-title" href="/notes-jekyll/how-to-write-notes">
         <li>
-          {{ post.title }} <small class="post-date">{{post.date | date: "%d/%m/%Y"}}</small>
+          How to write notes <small class="post-date">27/11/2020</small>
         </li>
       </a>
-    {% endfor %}
+    
+      <a class="post-title" href="/notes-jekyll/registration">
+        <li>
+          Registration <small class="post-date">27/11/2020</small>
+        </li>
+      </a>
+    
     </ul>
   </div>
 
   <div class="col s12 center-align">
     <ul class="pagination">
-      <li class="{% unless paginator.previous_page %}disabled{% else %}waves-effect{% endunless %}">
-        {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="{{site.baseurl}}/">
-        {% else %}
-        <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
-        {% endif %}
-        {% else %}
+      <li class="disabled">
+        
         <a href="#!">
-        {% endif %}
+        
           <i class="material-icons">chevron_left</i>
         </a>
       </li>
-      {% if paginator.page == 1 %}
+      
       <li class="active teal">
         <a href="#!">1</a>
-      {% else %}
-      <li class="waves-effect">
-        <a href="{{site.baseurl}}/">1</a>
-      {% endif %}
+      
       </li>
-      {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-      <li class="active teal"><a href="#!">{{count}}</a></li>
-      {% else %}
-      <li class="waves-effect"><a href="{{site.baseurl}}/page{{count}}">{{count}}</a></li>
-      {% endif %}
-      {% endfor %}
-      <li class="{% unless paginator.next_page %}disabled{% else %}waves-effect{% endunless %}">
-        {% if paginator.next_page %}
-        <a href="{{site.baseurl}}/page{{paginator.next_page}}">
-        {% else %}
+      
+      <li class="disabled">
+        
         <a href="#!">
-        {% endif %}
+        
           <i class="material-icons">chevron_right</i>
         </a>
       </li>
@@ -69,8 +171,264 @@ permalink: /
   </div>
   
   <div class="thi-columns">
-    {% bibliography %}
+    <ol class="bibliography"><li><div>
+    <div><span id="metz2011nonrigid">C. T. Metz, S. Klein, M. Schaap, T. van Walsum, and W. J. Niessen, “Nonrigid registration of dynamic medical imaging data using nD+ t B-splines and a groupwise optimization approach,” <i>Medical image analysis</i>, vol. 15, no. 2, pp. 238–249, 2011.</span>
+    <a href="/notes-jekyll/paper-details/metz2011nonrigid.html">Full details</a> |
+    <a href="/notes-jekyll/papers/metz2011nonrigid.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/metz2011nonrigid.html"></a></li>
+<li><div>
+    <div><span id="huizinga2016pca">W. Huizinga <i>et al.</i>, “PCA-based groupwise image registration for quantitative MRI,” <i>Medical image analysis</i>, vol. 29, pp. 65–78, 2016.</span>
+    <a href="/notes-jekyll/paper-details/huizinga2016pca.html">Full details</a> |
+    <a href="/notes-jekyll/papers/huizinga2016pca.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/huizinga2016pca.html"></a></li>
+<li><div>
+    <div><span id="klein2010elastix">S. Klein, M. Staring, K. Murphy, M. A. Viergever, and J. P. W. Pluim, “Elastix: A toolbox for intensity-based medical image registration,” <i>IEEE transactions on medical imaging</i>, vol. 29, no. 1, pp. 196–205, 2010.</span>
+    <a href="/notes-jekyll/paper-details/klein2010elastix.html">Full details</a> |
+    <a href="/notes-jekyll/papers/klein2010elastix.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/klein2010elastix.html"></a></li>
+<li><div>
+    <div><span id="klein2009adaptive">S. Klein, J. P. W. Pluim, M. Staring, and M. A. Viergever, “Adaptive stochastic gradient descent optimisation for image registration,” <i>International journal of computer vision</i>, vol. 81, no. 3, p. 227, 2009.</span>
+    <a href="/notes-jekyll/paper-details/klein2009adaptive.html">Full details</a> |
+    <a href="/notes-jekyll/papers/klein2009adaptive.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/klein2009adaptive.html"></a></li>
+<li><div>
+    <div><span id="wang2008simultaneous">F. Wang, B. C. Vemuri, A. Rangarajan, and S. J. Eisenschenk, “Simultaneous nonrigid registration of multiple point sets and atlas construction,” <i>IEEE transactions on pattern analysis and machine intelligence</i>, vol. 30, no. 11, pp. 2011–2022, 2008.</span>
+    <a href="/notes-jekyll/paper-details/wang2008simultaneous.html">Full details</a> |
+    <a href="/notes-jekyll/papers/wang2008simultaneous.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/wang2008simultaneous.html"></a></li>
+<li><div>
+    <div><span id="chen2010group">T. Chen, B. C. Vemuri, A. Rangarajan, and S. J. Eisenschenk, “Group-wise point-set registration using a novel CDF-based Havrda-Charvát divergence,” <i>International journal of computer vision</i>, vol. 86, no. 1, p. 111, 2010.</span>
+    <a href="/notes-jekyll/paper-details/chen2010group.html">Full details</a> |
+    <a href="/notes-jekyll/papers/chen2010group.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/chen2010group.html"></a></li>
+<li><div>
+    <div><span id="strand2017concept">R. Strand <i>et al.</i>, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0169966“A concept for holistic whole body MRI data analysis, Imiomics”&lt;/a&gt; <i>PloS one</i>, vol. 12, no. 2, 2017.</span>
+    <a href="/notes-jekyll/paper-details/strand2017concept.html">Full details</a> |
+    <a href="/notes-jekyll/papers/strand2017concept.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/strand2017concept.html"></a></li>
+<li><div>
+    <div><span id="lind2019proof">L. Lind, J. Kullberg, H. Ahlström, K. Michaëlsson, and R. Strand, https://www.nature.com/articles/s41598-019-43690-w“Proof of principle study of a detailed whole-body image analysis technique, ‘Imiomics’, regarding adipose and lean tissue distribution”&lt;/a&gt; <i>Scientific reports</i>, vol. 9, no. 1, p. 7388, 2019.</span>
+    <a href="/notes-jekyll/paper-details/lind2019proof.html">Full details</a> |
+    <a href="/notes-jekyll/papers/lind2019proof.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/lind2019proof.html"></a></li>
+<li><div>
+    <div><span id="ekstrom2020fast">S. Ekström, F. Malmberg, H. Ahlström, J. Kullberg, and R. Strand, https://arxiv.org/abs/1810.08427“Fast graph-cut based optimization for practical dense deformable registration of volume images”&lt;/a&gt; <i>Computerized Medical Imaging and Graphics</i>, vol. 84, p. 101745, 2020.</span>
+    <a href="/notes-jekyll/paper-details/ekstrom2020fast.html">Full details</a> |
+    <a href="/notes-jekyll/papers/ekstrom2020fast.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/ekstrom2020fast.html"></a></li>
+<li><div>
+    <div><span id="sjoholm2019whole">T. Sjöholm <i>et al.</i>, https://www.nature.com/articles/s41598-019-42613-z“A whole-body FDG PET/MR atlas for multiparametric voxel-based analysis”&lt;/a&gt; <i>Scientific reports</i>, vol. 9, no. 1, p. 6158, 2019.</span>
+    <a href="/notes-jekyll/paper-details/sjoholm2019whole.html">Full details</a> |
+    <a href="/notes-jekyll/papers/sjoholm2019whole.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/sjoholm2019whole.html"></a></li>
+<li><div>
+    <div><span id="pilia2019average">M. Pilia, J. Kullberg, H. Ahlström, F. Malmberg, S. Ekström, and R. Strand, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0222700“Average volume reference space for large scale registration of whole-body magnetic resonance images”&lt;/a&gt; <i>PLOS ONE</i>, vol. 14, no. 10, pp. 1–15, 2019.</span>
+    <a href="/notes-jekyll/paper-details/pilia2019average.html">Full details</a> |
+    <a href="/notes-jekyll/papers/pilia2019average.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/pilia2019average.html"></a></li>
+<li><div>
+    <div><span id="guimond2000average">A. Guimond, J. Meunier, and J.-P. Thirion, “Average brain models: A convergence study,” <i>Computer vision and image understanding</i>, vol. 77, no. 2, pp. 192–210, 2000.</span>
+    <a href="/notes-jekyll/paper-details/guimond2000average.html">Full details</a> |
+    <a href="/notes-jekyll/papers/guimond2000average.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/guimond2000average.html"></a></li>
+<li><div>
+    <div><span id="wu2011sharpmean">G. Wu, H. Jia, Q. Wang, and D. Shen, “SharpMean: groupwise registration guided by sharp mean image and tree-based registration,” <i>NeuroImage</i>, vol. 56, no. 4, pp. 1968–1981, 2011.</span>
+    <a href="/notes-jekyll/paper-details/wu2011sharpmean.html">Full details</a> |
+    <a href="/notes-jekyll/papers/wu2011sharpmean.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/wu2011sharpmean.html"></a></li>
+<li><div>
+    <div><span id="balci2006free">S. K. Balci, P. Golland, M. Shenton, and W. M. Wells, “Free-Form B-spline Deformation Model for Groupwise Registration,” in <i>MICCAI. International Conference on Medical Image Computing and Computer-Assisted Intervention</i>, 2006, vol. 10, pp. 23–30.</span>
+    <a href="/notes-jekyll/paper-details/balci2006free.html">Full details</a> |
+    <a href="/notes-jekyll/papers/balci2006free.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/balci2006free.html"></a></li>
+<li><div>
+    <div><span id="joshi2004unbiased">S. Joshi, B. Davis, M. Jomier, and G. Gerig, “Unbiased diffeomorphic atlas construction for computational anatomy,” <i>NeuroImage</i>, vol. 23, pp. S151–S160, 2004.</span>
+    <a href="/notes-jekyll/paper-details/joshi2004unbiased.html">Full details</a> |
+    <a href="/notes-jekyll/papers/joshi2004unbiased.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/joshi2004unbiased.html"></a></li>
+<li><div>
+    <div><span id="khanal2017simulating">B. Khanal, N. Ayache, and X. Pennec, “Simulating Longitudinal Brain MRIs with known Volume Changes and Realistic Variations in Image Intensity,” <i>Frontiers in Neuroscience</i>, vol. 11, no. Article 132, p. 18, 2017.</span>
+    <a href="/notes-jekyll/paper-details/khanal2017simulating.html">Full details</a> |
+    <a href="/notes-jekyll/papers/khanal2017simulating.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/khanal2017simulating.html"></a></li>
+<li><div>
+    <div><span id="smith2003biomechanical">A. D. C. Smith, W. R. Crum, D. L. Hill, N. A. Thacker, and P. A. Bromiley, “Biomechanical simulation of atrophy in MR images,” in <i>Proceedings of SPIE</i>, 2003, vol. 5032, pp. 481–490.</span>
+    <a href="/notes-jekyll/paper-details/smith2003biomechanical.html">Full details</a> |
+    <a href="/notes-jekyll/papers/smith2003biomechanical.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/smith2003biomechanical.html"></a></li>
+<li><div>
+    <div><span id="camara2006phenomenological">O. Camara <i>et al.</i>, “Phenomenological model of diffuse global and regional atrophy using finite-element methods,” <i>IEEE transactions on medical imaging</i>, vol. 25, no. 11, pp. 1417–1430, 2006.</span>
+    <a href="/notes-jekyll/paper-details/camara2006phenomenological.html">Full details</a> |
+    <a href="/notes-jekyll/papers/camara2006phenomenological.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/camara2006phenomenological.html"></a></li>
+<li><div>
+    <div><span id="karaccali2006simulation">B. Karaçali and C. Davatzikos, “Simulation of tissue atrophy using a topology preserving transformation model,” <i>IEEE transactions on medical imaging</i>, vol. 25, no. 5, pp. 649–652, 2006.</span>
+    <a href="/notes-jekyll/paper-details/karaccali2006simulation.html">Full details</a> |
+    <a href="/notes-jekyll/papers/karaccali2006simulation.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/karaccali2006simulation.html"></a></li>
+<li><div>
+    <div><span id="van2013mapping">M. C. van Eede, J. Scholz, M. M. Chakravarty, R. M. Henkelman, and J. P. Lerch, “Mapping registration sensitivity in MR mouse brain images,” <i>Neuroimage</i>, vol. 82, pp. 226–236, 2013.</span>
+    <a href="/notes-jekyll/paper-details/van2013mapping.html">Full details</a> |
+    <a href="/notes-jekyll/papers/van2013mapping.pdf" target="_blank">PDF</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/van2013mapping.html"></a></li></ol>
   </div>
 
 </div>
 
+
+		</div>
+	</div>
+</main>
+
+	<script src="/notes-jekyll/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/notes-jekyll/assets/img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+
+	<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container text-white">
+          <a class="waves-effect" href="/notes-jekyll/tags">Tags</a> | <a class="waves-effect" href="/notes-jekyll/categories">Categories</a> | <a class="waves-effect" href="https://github.com/vsoch/notes-jekyll">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+
+
+<script src="/notes-jekyll/assets/js/main.js"></script>
+
+</body>
+</html>

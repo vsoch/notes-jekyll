@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/notes-jekyll/assets/img/banner.png" />
+
+  
+
+  <title>
+    
+      How to write notes | notes-jekyll
+    
+  </title>
+
+  
+    <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/notes-jekyll/assets/img/favicon.ico">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/notes-jekyll/assets/css/main.css">
+  <link rel="stylesheet" href="/notes-jekyll/assets/css/thi_scss.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet"> 
+
+  
+    
+      <link rel="stylesheet" href="/notes-jekyll/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/notes-jekyll/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/notes-jekyll/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/notes-jekyll/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="How to write notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="tocIn this post" />
+<meta property="og:description" content="tocIn this post" />
+<link rel="canonical" href="/notes-jekyll/how-to-write-notes" />
+<meta property="og:url" content="/notes-jekyll/how-to-write-notes" />
+<meta property="og:site_name" content="notes-jekyll" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to write notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-11-27T00:00:00+00:00","datePublished":"2020-11-27T00:00:00+00:00","description":"tocIn this post","headline":"How to write notes","mainEntityOfPage":{"@type":"WebPage","@id":"/notes-jekyll/how-to-write-notes"},"url":"/notes-jekyll/how-to-write-notes"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/notes-jekyll/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/notes-jekyll/assets/img/napkins.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">vsoch/notes-jekyll</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="https://github.com/vsoch/notes-jekyll"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/notes-jekyll/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#front-matter">Front Matter</a></li>
+  <li><a href="#code">Code</a>
+    <ol>
+      <li><a href="#syntax-highlighting">Syntax highlighting</a></li>
+      <li><a href="#keyboard">Keyboard</a></li>
+    </ol>
+  </li>
+  <li><a href="#insert-a-figure">Insert a figure</a>
+    <ol>
+      <li><a href="#standard">Standard</a></li>
+      <li><a href="#inline">Inline</a></li>
+    </ol>
+  </li>
+  <li><a href="#insert-an-video-from-youtube">Insert an video from Youtube</a></li>
+  <li><a href="#for-writing-posts">For writing posts</a>
+    <ol>
+      <li><a href="#remove-heading-numbering">Remove heading numbering</a></li>
+      <li><a href="#manually-assign-an-id-for-a-heading">Manually assign an id for a heading</a></li>
+      <li><a href="#insert-toc-table-of-contents">Insert toc (Table of Contents)</a></li>
+      <li><a href="#make-a-list-into-columns">Make a list into columns</a></li>
+      <li><a href="#insert-a-read-more-link">Insert a read-more link</a></li>
+      <li><a href="#insert-steps">Insert steps</a></li>
+    </ol>
+  </li>
+  <li><a href="#mathematical-expressions">Mathematical expressions</a>
+    <ol>
+      <li><a href="#inline-math">Inline math</a></li>
+      <li><a href="#block">Block</a>
+        <ol>
+          <li><a href="#special-characters">Special Characters</a></li>
+          <li><a href="#matrices">Matrices</a></li>
+          <li><a href="#labels">Labels</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#boxes">Boxes</a>
+    <ol>
+      <li><a href="#theorem-boxes">Theorem boxes</a></li>
+      <li><a href="#interative-coding-blocks">Interative coding blocks</a></li>
+      <li><a href="#notification-boxes">Notification boxes</a></li>
+      <li><a href="#insert-accordian">Insert Accordian</a></li>
+      <li><a href="#insert-blockquote">Insert blockquote</a></li>
+      <li><a href="#summary-block">Summary block</a></li>
+    </ol>
+  </li>
+  <li><a href="#cat-tag">Categories and tags</a>
+    <ol>
+      <li><a href="#use-it">Use it</a></li>
+      <li><a href="#create-a-new-category">Create a new category</a></li>
+      <li><a href="#already-defined-tags--categories">Already-defined tags / categories</a></li>
+    </ol>
+  </li>
+  <li><a href="#text">Text</a></li>
+  <li><a href="#figures--tables--videos">Figures / Tables / Videos</a></li>
+  <li><a href="#boxes-1">Boxes</a>
+    <ol>
+      <li><a href="#hideshow">Hide/Show</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#pull-quotes">Pull quotes</a></li>
+      <li><a href="#summarization-box">Summarization box</a></li>
+      <li><a href="#theorem-style">Theorem style</a></li>
+      <li><a href="#important-boxes">Important boxes</a></li>
+    </ol>
+  </li>
+  <li><a href="#others">Others</a>
+    <ol>
+      <li><a href="#side-by-side">Side by side</a></li>
+      <li><a href="#links">Links</a></li>
+      <li><a href="#notices">Notices</a></li>
+      <li><a href="#steps">Steps</a></li>
+    </ol>
+  </li>
+</ol>
+  </div>
+</div>
+
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>How to write notes</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">27/11/2020</span>
+        
+          
+          
+            <a class="cat-class cat-commas" href="/notes-jekyll/categories#notes-jekyll">notes-jekyll</a>.
+          
+        
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <div id="toc">
+  <div class="toc-title">
+    <i class="material-icons mat-icon">toc</i><span>In this post</span>
+  </div>
+  <div id="full">
+<ul id="markdown-toc">
+  <li><a href="#front-matter" id="markdown-toc-front-matter">Front Matter</a></li>
+  <li><a href="#code" id="markdown-toc-code">Code</a>    <ul>
+      <li><a href="#syntax-highlighting" id="markdown-toc-syntax-highlighting">Syntax highlighting</a></li>
+      <li><a href="#keyboard" id="markdown-toc-keyboard">Keyboard</a></li>
+    </ul>
+  </li>
+  <li><a href="#insert-a-figure" id="markdown-toc-insert-a-figure">Insert a figure</a>    <ul>
+      <li><a href="#standard" id="markdown-toc-standard">Standard</a></li>
+      <li><a href="#inline" id="markdown-toc-inline">Inline</a></li>
+    </ul>
+  </li>
+  <li><a href="#insert-an-video-from-youtube" id="markdown-toc-insert-an-video-from-youtube">Insert an video from Youtube</a></li>
+  <li><a href="#for-writing-posts" id="markdown-toc-for-writing-posts">For writing posts</a>    <ul>
+      <li><a href="#remove-heading-numbering" id="markdown-toc-remove-heading-numbering">Remove heading numbering</a></li>
+      <li><a href="#manually-assign-an-id-for-a-heading" id="markdown-toc-manually-assign-an-id-for-a-heading">Manually assign an id for a heading</a></li>
+      <li><a href="#insert-toc-table-of-contents" id="markdown-toc-insert-toc-table-of-contents">Insert toc (Table of Contents)</a></li>
+      <li><a href="#make-a-list-into-columns" id="markdown-toc-make-a-list-into-columns">Make a list into columns</a></li>
+      <li><a href="#insert-a-read-more-link" id="markdown-toc-insert-a-read-more-link">Insert a read-more link</a></li>
+      <li><a href="#insert-steps" id="markdown-toc-insert-steps">Insert steps</a></li>
+    </ul>
+  </li>
+  <li><a href="#mathematical-expressions" id="markdown-toc-mathematical-expressions">Mathematical expressions</a>    <ul>
+      <li><a href="#inline-math" id="markdown-toc-inline-math">Inline math</a></li>
+      <li><a href="#block" id="markdown-toc-block">Block</a>        <ul>
+          <li><a href="#special-characters" id="markdown-toc-special-characters">Special Characters</a></li>
+          <li><a href="#matrices" id="markdown-toc-matrices">Matrices</a></li>
+          <li><a href="#labels" id="markdown-toc-labels">Labels</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#boxes" id="markdown-toc-boxes">Boxes</a>    <ul>
+      <li><a href="#theorem-boxes" id="markdown-toc-theorem-boxes">Theorem boxes</a></li>
+      <li><a href="#interative-coding-blocks" id="markdown-toc-interative-coding-blocks">Interative coding blocks</a></li>
+      <li><a href="#notification-boxes" id="markdown-toc-notification-boxes">Notification boxes</a></li>
+      <li><a href="#insert-accordian" id="markdown-toc-insert-accordian">Insert Accordian</a></li>
+      <li><a href="#insert-blockquote" id="markdown-toc-insert-blockquote">Insert blockquote</a></li>
+      <li><a href="#summary-block" id="markdown-toc-summary-block">Summary block</a></li>
+    </ul>
+  </li>
+  <li><a href="#cat-tag" id="markdown-toc-cat-tag">Categories and tags</a>    <ul>
+      <li><a href="#use-it" id="markdown-toc-use-it">Use it</a></li>
+      <li><a href="#create-a-new-category" id="markdown-toc-create-a-new-category">Create a new category</a></li>
+      <li><a href="#already-defined-tags--categories" id="markdown-toc-already-defined-tags--categories">Already-defined tags / categories</a></li>
+    </ul>
+  </li>
+  <li><a href="#text" id="markdown-toc-text">Text</a></li>
+  <li><a href="#figures--tables--videos" id="markdown-toc-figures--tables--videos">Figures / Tables / Videos</a></li>
+  <li><a href="#boxes-1" id="markdown-toc-boxes-1">Boxes</a>    <ul>
+      <li><a href="#hideshow" id="markdown-toc-hideshow">Hide/Show</a></li>
+      <li><a href="#notifications" id="markdown-toc-notifications">Notifications</a></li>
+      <li><a href="#pull-quotes" id="markdown-toc-pull-quotes">Pull quotes</a></li>
+      <li><a href="#summarization-box" id="markdown-toc-summarization-box">Summarization box</a></li>
+      <li><a href="#theorem-style" id="markdown-toc-theorem-style">Theorem style</a></li>
+      <li><a href="#important-boxes" id="markdown-toc-important-boxes">Important boxes</a></li>
+    </ul>
+  </li>
+  <li><a href="#others" id="markdown-toc-others">Others</a>    <ul>
+      <li><a href="#side-by-side" id="markdown-toc-side-by-side">Side by side</a></li>
+      <li><a href="#links" id="markdown-toc-links">Links</a></li>
+      <li><a href="#notices" id="markdown-toc-notices">Notices</a></li>
+      <li><a href="#steps" id="markdown-toc-steps">Steps</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<h2 id="front-matter">Front Matter</h2>
+
+<p><a href="https://jekyllrb.com/docs/frontmatter/">Front matter</a> refers to the section of text at the top of a posts file.
+For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: How to use NoteTheme?
+---
+</code></pre></div></div>
+
+<p>The following components are included:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">maths: 1</code> add this if you want to use mathematical expression in the post.</li>
+  <li><code class="language-plaintext highlighter-rouge">toc: 1</code> if you want to display a table of contents on the left sidebar</li>
+  <li><code class="language-plaintext highlighter-rouge">datacamp: 1</code> if you want to embed a datacamp interactive code question (see below)</li>
+  <li><code class="language-plaintext highlighter-rouge">categories: [notetheme,jekyll]</code> add category you want</li>
+  <li><code class="language-plaintext highlighter-rouge">tags: [notetheme,jekyll,code]</code> add tag you want</li>
+  <li><code class="language-plaintext highlighter-rouge">date: 2018-08-21</code> if you update the post, write the updated date</li>
+</ul>
+
+<h2 id="code">Code</h2>
+
+<h3 id="syntax-highlighting">Syntax highlighting</h3>
+
+<p>You can insert any block of code you want with a syntax highlight effect like below</p>
+
+<p>Available languages : <code class="language-plaintext highlighter-rouge">ruby</code>, <code class="language-plaintext highlighter-rouge">python</code>, <code class="language-plaintext highlighter-rouge">c</code>, <code class="language-plaintext highlighter-rouge">matlab</code>, <code class="language-plaintext highlighter-rouge">latex</code>, <code class="language-plaintext highlighter-rouge">html</code>, <code class="language-plaintext highlighter-rouge">css</code>, <code class="language-plaintext highlighter-rouge">javascript</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% highlight ruby %}
+
+{% endhighlight %}
+</code></pre></div></div>
+
+<p>For example, <strong>Python</strong> with <strong>line numbering</strong>,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% highlight python linenos %}
+
+{% endhighlight %}
+</code></pre></div></div>
+
+<p>or something appears in the command line window like this</p>
+<div class="terminal">
+  <p><code class="language-plaintext highlighter-rouge">$ sudo apt-get update</code></p>
+</div>
+<p>by using</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"terminal"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+`$ sudo apt-get update`
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="keyboard">Keyboard</h3>
+
+<p>You can also insert a keyboard key like this <kbd>Ctrl</kbd> + <kbd>B</kbd>, just use <code class="language-plaintext highlighter-rouge">&lt;kbd&gt;Ctrl&lt;/kbd&gt;</code>.</p>
+
+<h2 id="insert-a-figure">Insert a figure</h2>
+
+<h3 id="standard">Standard</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![](/link/to/figure/){:.w-500 .no-border}
+</code></pre></div></div>
+
+<div class="thi-colums">
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">no-border</code>: remove the border around figure</li>
+    <li><code class="language-plaintext highlighter-rouge">w-300</code>: reduce the size of image to maximum <code class="language-plaintext highlighter-rouge">300px</code> (if the screen’s maximum size is <code class="language-plaintext highlighter-rouge">500px</code>, the figure’s size will be <code class="language-plaintext highlighter-rouge">100%</code> the size of the screen). You can change the number <code class="language-plaintext highlighter-rouge">3</code> in <code class="language-plaintext highlighter-rouge">300</code> by other numbers <code class="language-plaintext highlighter-rouge">2,4,5,6,7,8,10</code> or something like <code class="language-plaintext highlighter-rouge">w-150</code>.</li>
+  </ul>
+</div>
+
+<h3 id="inline">Inline</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include img-inline.html content="/link/to/figure/" %}
+</code></pre></div></div>
+
+<h2 id="insert-an-video-from-youtube">Insert an video from Youtube</h2>
+
+<p>Determine the youtube video’s url, like this</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.youtube.com/watch?v=wIsK4kQTrIg
+</code></pre></div></div>
+
+<p>Choose <code class="language-plaintext highlighter-rouge">wIsK4kQTrIg</code> and put it inside below code</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include youtube.html content="wIsK4kQTrIg" size="5" %}
+</code></pre></div></div>
+
+<p>In that, <code class="language-plaintext highlighter-rouge">5</code> represents the percent your youtube container width in comparison with the page’s width, for example, <code class="language-plaintext highlighter-rouge">5</code> means “50%”. You can choose any integer number between <code class="language-plaintext highlighter-rouge">3</code> and <code class="language-plaintext highlighter-rouge">10</code>. This size is only available on a wide screen (min width is 993px), when the screen is smaller than 993px, the width becomes automatically 100% of page width.</p>
+
+<h2 id="for-writing-posts">For writing posts</h2>
+
+<h3 id="remove-heading-numbering">Remove heading numbering</h3>
+
+<p>If you don’t want display number before some heading, just put BEFORE this heading <code class="language-plaintext highlighter-rouge">{.nocount}</code>, for example,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{:.nocount}
+## Heading without numbering
+</code></pre></div></div>
+
+<p>If you want to use multiple classes, separate them by space.</p>
+
+<h3 id="manually-assign-an-id-for-a-heading">Manually assign an id for a heading</h3>
+
+<p>Indert <code class="language-plaintext highlighter-rouge">{:#your-id}</code> before this heading, for instance,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{:#your-id}
+## Heading
+</code></pre></div></div>
+
+<p>If you want to then use it</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Caption]({{ post.url }}#your-id)
+</code></pre></div></div>
+
+<h3 id="insert-toc-table-of-contents">Insert toc (Table of Contents)</h3>
+
+<p>There are actually two choices for the Table of contents! You can add one manually (as
+you see to the right, here):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include toc.html %}
+</code></pre></div></div>
+
+<p>And you can also see the one generated in the left sidebar via the front end matter:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">toc</span><span class="pi">:</span> <span class="m">1</span>
+</code></pre></div></div>
+
+<h3 id="make-a-list-into-columns">Make a list into columns</h3>
+
+<p>Put the list inside a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> tag like,</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thi-columns"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+- item 1
+- item 2
+- item 3
+- item 4
+- item 5
+- item 6
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>And the result looks like this - notice how we span two colums!</p>
+
+<div class="thi-columns">
+  <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+  </ul>
+</div>
+
+<h3 id="insert-a-read-more-link">Insert a read-more link</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
+</code></pre></div></div>
+
+<div class="thi-more">
+	<i class="material-icons">keyboard_arrow_right</i>
+	<a href="http://math2it.com">Welcome to Math2IT</a>.
+</div>
+
+<h3 id="insert-steps">Insert steps</h3>
+
+<p>If you want something like this:</p>
+
+<div class="thi-step">
+<div class="step">
+<div class="step-number">
+</div>
+<div class="step-content">
+      <p>Content in step 1.</p>
+    </div>
+</div>
+
+<div class="step">
+<div class="step-number">
+</div>
+<div class="step-content">
+      <p>Content in step 2</p>
+    </div>
+</div>
+</div>
+
+<p>Do the following:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span>  <span class="na">class=</span><span class="s">"thi-step"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-number"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content in step 1.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-number"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content in step 2
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="mathematical-expressions">Mathematical expressions</h2>
+
+<h3 id="inline-math">Inline math</h3>
+<p>For inline math, use <code class="language-plaintext highlighter-rouge">$math-expression$</code></p>
+
+<h3 id="block">Block</h3>
+<p>For an entire block, you can use <code class="language-plaintext highlighter-rouge">$math block$</code> or</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$x^n + y^n = z^n$
+</code></pre></div></div>
+
+<p>Which will render to $x^n + y^n = z^n$.</p>
+
+<h4 id="special-characters">Special Characters</h4>
+
+<p>If you want to insert some special characters, you must put <code class="language-plaintext highlighter-rouge">\</code> before this character, for instance, <code class="language-plaintext highlighter-rouge">\\{ 1,2,3 \\}</code> gives $\{ 1m2,3 \}$</p>
+
+<p><strong>Tips</strong></p>
+<ul>
+  <li>If you type inline math that contains characters <code class="language-plaintext highlighter-rouge">_</code>, you must add <code class="language-plaintext highlighter-rouge">\</code> before each of them, for example, <code class="language-plaintext highlighter-rouge">a\_1</code> give $a_1$.</li>
+  <li>Don’t use <code class="language-plaintext highlighter-rouge">||</code> for absolute values, let’s use <code class="language-plaintext highlighter-rouge">\vert \vert</code> instead.</li>
+  <li>Don’t use <code class="language-plaintext highlighter-rouge">\left\| \right\|</code> for norms, use <code class="language-plaintext highlighter-rouge">\Vert \Vert</code> instead.</li>
+  <li>Don’t use <code class="language-plaintext highlighter-rouge">*</code> for star symbols, use <code class="language-plaintext highlighter-rouge">\ast</code> instead.</li>
+  <li>If you want to type <code class="language-plaintext highlighter-rouge">\\</code>, type <code class="language-plaintext highlighter-rouge">\\\\</code> instead.</li>
+</ul>
+
+<h4 id="matrices">Matrices</h4>
+<p>If you want to type an inline matrix, e.g., $[A]=\begin{bmatrix}1 &amp; 2 \\ 2 &amp; 3.999 \end{bmatrix}$, type like below,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$[A]=\begin{bmatrix}1 &amp; 2 \\\\ 2 &amp; 3.999 \end{bmatrix},$
+</code></pre></div></div>
+
+<h4 id="labels">Labels</h4>
+<p>In order to use <code class="language-plaintext highlighter-rouge">\label{}</code> and <code class="language-plaintext highlighter-rouge">\eqref{}</code> like in latex, use</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$\begin{align}\tag{1}\label{eq1}
+x^n + y^n = z^n
+\end{align}
+$
+
+Call again equation $\eqref{eq1}$.
+</code></pre></div></div>
+
+<p>The above renders to:</p>
+
+<p>$\begin{align}\tag{1}\label{eq1}x^n + y^n = z^n\end{align}$
+Call again equation $\eqref{eq1}$.</p>
+
+<h2 id="boxes">Boxes</h2>
+
+<h3 id="theorem-boxes">Theorem boxes</h3>
+
+<p>A theorum box is a nice little callout to highlight some special text. You
+can create one as follows:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thi-box"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box-title"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+**Title**
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box-content"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>which renders into:</p>
+
+<div class="thi-box">
+  <div class="box-title">
+    <p><strong>Title</strong></p>
+  </div>
+  <div class="box-content">
+    <p>Content</p>
+  </div>
+</div>
+
+<h3 id="interative-coding-blocks">Interative coding blocks</h3>
+
+<p>You even can embed <strong>R/Python</strong> code environment inside a post like this.</p>
+
+<div class="mt-2 mb-2" data-datacamp-exercise="" data-lang="r">
+	<code data-type="pre-exercise-code">
+		# This will get executed each time the exercise gets initialized
+		b = 6
+	</code>
+	<code data-type="sample-code">
+		# Create a variable a, equal to 5
+		# Print out a
+	</code>
+	<code data-type="solution">
+		# Create a variable a, equal to 5
+		a &lt;- 5
+
+		# Print out a
+		print(a)
+	</code>
+	<code data-type="sct">
+		test_object("a")
+		test_function("print")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">Use the assignment operator (<code>&lt;-</code>) to create the variable <code>a</code>.</div>
+</div>
+
+<h3 id="notification-boxes">Notification boxes</h3>
+
+<p>A notification box is useful to draw the eyes of the reader to important content.
+You could create a warning, for example, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include warning.html content="Warning's content" %}
+</code></pre></div></div>
+
+<p>Rendered it looks like the following:</p>
+
+<p class="thi-warning"><i class="material-icons mat-icon">error</i>Warning’s content</p>
+
+<p>There is another style for information:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include tip.html content="Info's content" %}
+</code></pre></div></div>
+
+<p>which renders to:</p>
+
+<p class="thi-tip"><i class="material-icons mat-icon">info</i>Info’s content</p>
+
+<h3 id="insert-accordian">Insert Accordian</h3>
+
+<p>An accordian menu hides some content, and the user can click to reveal it. It’s
+best to use an icon on it that suggests that the user should click, like an arrow.</p>
+
+<p>Use these lines of code</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"collapsible"</span> <span class="na">data-collapsible=</span><span class="s">"accordion"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;li&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapsible-header"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>expand_more<span class="nt">&lt;/i&gt;</span>
+Title
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapsible-body"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<p>The above renders into an expandable section:</p>
+
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header">
+      <p><i class="material-icons">expand_more</i>
+Title</p>
+    </div>
+<div class="collapsible-body">
+      <p>Content</p>
+    </div>
+</li>
+</ul>
+
+<h3 id="insert-blockquote">Insert blockquote</h3>
+
+<p>A blockquote is a nice style to show a quote, for example:</p>
+
+<p class="post-more-info">
+The content of extra info of the post.
+</p>
+
+<p>And you can generate the above as follows:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-more-info"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+The content of extra info of the post.
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<blockquote>
+  <p>Other normal blockquote like this.</p>
+</blockquote>
+
+<h3 id="summary-block">Summary block</h3>
+
+<p>A summary block has a title, and then some content, and is another strategy
+to point out more salient information. If you use these lines of code:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"field-set"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"leg-title"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/legend&gt;</span>
+Content
+<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
+
+<p>You can then generate:</p>
+
+<fieldset class="field-set">
+  <legend class="leg-title">Title</legend>
+  <p>Content</p>
+</fieldset>
+
+<h2 id="cat-tag">Categories and tags</h2>
+
+<h3 id="use-it">Use it</h3>
+
+<p>On the front matter of each post, use this</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>categories: [maths, python] 
+tags: [algebra, function, theorem]
+</code></pre></div></div>
+
+<h3 id="create-a-new-category">Create a new category</h3>
+
+<ol>
+  <li>Below the title of each post, you will see “in <category>", for example, this post **in NoteTheme**.</category></li>
+  <li>Open file <code class="language-plaintext highlighter-rouge">_data\categories.yml</code> and add the new category you want
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">slug</code>: the id of this category, it will appear in the url, like
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  https://dinhanhthi.github.io/notetheme/categories#notetheme
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">name</code> : the name of this catefory, it will appear on the site, like <code class="language-plaintext highlighter-rouge">notetheme</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="already-defined-tags--categories">Already-defined tags / categories</h3>
+
+<p>Already-defined categories:</p>
+
+<div class="thi-columns">
+<ul>
+
+<li><code class="highlighter-rouge">registration</code> : <a href="/registration">registration</a></li>
+
+<li><code class="highlighter-rouge">notes-jekyll</code> : <a href="/notes-jekyll">notes-jekyll</a></li>
+
+</ul>
+</div>
+
+<p>
+Already-defined tags: 
+
+<code class="highlighter-rouge">registration</code>
+
+, 
+
+
+<code class="highlighter-rouge">jekyll</code>
+
+.
+
+
+</p>
+
+<h2 id="text">Text</h2>
+
+<ul>
+  <li><strong>New</strong> badge: <code class="language-plaintext highlighter-rouge">&lt;new /&gt;</code></li>
+  <li><strong>Update</strong> bagge: <code class="language-plaintext highlighter-rouge">&lt;update /&gt;</code></li>
+  <li><strong>Keyboard</strong>: <code class="language-plaintext highlighter-rouge">&lt;kbd&gt;Ctrl&lt;/kbd&gt;</code></li>
+</ul>
+
+<new />
+
+<update />
+
+<p><kbd>Ctrl</kbd></p>
+
+<h2 id="figures--tables--videos">Figures / Tables / Videos</h2>
+
+<ul>
+  <li>
+    <p><strong>Normal way</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![](/link/to/figure/){:.w-500 .no-border}
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Inline figures</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include img-inline.html content="/link/to/figure/" %}
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Youtube video</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include youtube.html content="wIsK4kQTrIg" size="5" %}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="boxes-1">Boxes</h2>
+
+<h3 id="hideshow">Hide/Show</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"collapsible"</span> <span class="na">data-collapsible=</span><span class="s">"accordion"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;li&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapsible-header"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>face<span class="nt">&lt;/i&gt;</span>
+Title
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapsible-body"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<h3 id="notifications">Notifications</h3>
+
+<ul>
+  <li>
+    <p>Info</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">markdown=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"thi-tip"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons mat-icon"</span><span class="nt">&gt;</span>info<span class="nt">&lt;/i&gt;</span>
+content
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Error</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">markdown=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"thi-warning"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons mat-icon"</span><span class="nt">&gt;</span>error<span class="nt">&lt;/i&gt;</span>
+content
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="pull-quotes">Pull quotes</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-more-info"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+The content of extra info of the post.
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h3 id="summarization-box">Summarization box</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"field-set"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"leg-title"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/legend&gt;</span>
+Content
+<span class="nt">&lt;/fieldset&gt;</span>
+</code></pre></div></div>
+
+<h3 id="theorem-style">Theorem style</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thi-box"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box-title"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+**Title**
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box-content"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="important-boxes">Important boxes</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-mark"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="others">Others</h2>
+
+<h3 id="side-by-side">Side by side</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row d-flex"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col s12 l6"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+This is the code
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col s12 l6"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+This is the result
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="links">Links</h3>
+
+<p>See again</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"see-again"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"material-icons"</span><span class="nt">&gt;</span>settings_backup_restore<span class="nt">&lt;/i&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Read-more link</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
+</code></pre></div></div>
+
+<p>Download</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include download.html content="[Download text](download link)." %}
+</code></pre></div></div>
+
+<h3 id="notices">Notices</h3>
+
+<p>You can create a notice as follows:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"field-set"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"leg-title"</span><span class="nt">&gt;</span>TL;DR<span class="nt">&lt;/legend&gt;</span>
+- Show the post in a flexible way.
+- Show the figures any place
+- Show the maths, the code blocks in a beautiful way.
+- and many things else...
+<span class="nt">&lt;/fieldset&gt;</span>
+</code></pre></div></div>
+
+<p>And it looks like this</p>
+
+<fieldset class="field-set">
+  <legend class="leg-title">TL;DR</legend>
+  <ul>
+    <li>Show the post in a flexible way.</li>
+    <li>Show the figures any place</li>
+    <li>Show the maths, the code blocks in a beautiful way.</li>
+    <li>and many things else…</li>
+  </ul>
+</fieldset>
+
+<h3 id="steps">Steps</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span>  <span class="na">class=</span><span class="s">"thi-step"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-number"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content in step 1.
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-number"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-content"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+Content in step 2
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/notes-jekyll/tags#jekyll"><div class="chip z-depth-1">jekyll</div></a>
+      
+    </div>
+    <style type="text/css">
+.related-posts{
+  border: 3px dotted #2e87e7;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px 10px 0 10px;
+}
+.related-posts span{
+  font-size: 130%;
+  font-weight: 500;
+  color: #2e87e7;
+}
+.related-posts ul{
+  margin-top: 5px!important;
+}
+.thi-icon{
+  float: left;
+  line-height: inherit;
+  margin-right: 5px;
+  margin-left: 2px;
+  color: #2e87e7;
+}
+</style>
+
+<div class="related-posts">
+  <i class="material-icons thi-icon">grade</i><span>Related Notes</span>
+  
+  <ul>
+    
+    
+      
+      
+        
+      
+    
+
+    
+    
+      
+        
+
+        
+        
+          
+        
+        
+          
+          <li>
+            <a href="/notes-jekyll/registration">
+                Registration
+            </a>
+            <small>27 Nov 2020</small>
+          </li>
+        
+      
+    
+  </ul>
+</div>
+
+    <form action="/notes-jekyll/search" method="get">
+	<input type="search" name="q"  placeholder="Search for..." autofocus>
+	<input type="submit" value="Search" style="display: none;">
+</form>
+
+  </div>
+</main>
+
+	<script src="/notes-jekyll/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/notes-jekyll/assets/img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+
+	<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container text-white">
+          <a class="waves-effect" href="/notes-jekyll/tags">Tags</a> | <a class="waves-effect" href="/notes-jekyll/categories">Categories</a> | <a class="waves-effect" href="https://github.com/vsoch/notes-jekyll">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/notes-jekyll/assets/js/post.js"></script>
+  
+
+
+
+<script src="/notes-jekyll/assets/js/main.js"></script>
+
+</body>
+</html>

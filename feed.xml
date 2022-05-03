@@ -1,24 +1,32 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:20 %}
+    <title>notes-jekyll</title>
+    <description>I want to write it down, and for it to be pretty.</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
+        <title>How to write notes</title>
         <description>
-          {% if post.subtitle %}{{ post.subtitle | xml_escape }} - {% endif %}
-          {{ post.content | strip_html | xml_escape | truncatewords: 50 }}
+          
+          tocIn this post Front Matter Code Syntax highlighting Keyboard Insert a figure Standard Inline Insert an video from Youtube For writing posts Remove heading numbering Manually assign an id for a heading Insert toc (Table of Contents) Make a list into columns Insert a read-more link Insert steps Mathematical expressions...
         </description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+        <link>/how-to-write-notes</link>
+        <guid isPermaLink="true">/how-to-write-notes</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Registration</title>
+        <description>
+          
+          tocIn this post Section I Sub Section A Sub Section B Section II Section I Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec dui nunc mattis. Leo vel orci porta non pulvinar neque laoreet....
+        </description>
+        <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+        <link>/registration</link>
+        <guid isPermaLink="true">/registration</guid>
+      </item>
+    
   </channel>
 </rss>
