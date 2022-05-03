@@ -232,15 +232,17 @@ Content in step 2
 For inline math, use `$math-expression$`
 
 ### Block
-For an entire block, you can use `$$math block$$` or 
+For an entire block, you can use `$math block$` or 
 
-	~~~ latex
-	$$
-	x^n + y^n = z^n
-	$$
-	~~~
+
+	$x^n + y^n = z^n$
+
+
+Which will render to $x^n + y^n = z^n$.
+
 
 #### Special Characters
+
 If you want to insert some special characters, you must put `\` before this character, for instance, `\\{ 1,2,3 \\}` gives $\\{ 1m2,3 \\}$
 
 **Tips**
@@ -253,42 +255,23 @@ If you want to insert some special characters, you must put `\` before this char
 #### Matrices
 If you want to type an inline matrix, e.g., $[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix}$, type like below,
 
-	~~~ latex
 	$[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix},$
-	~~~
+
 
 #### Labels
 In order to use `\label{}` and `\eqref{}` like in latex, use
 
-	~~~ latex
-	$$
-	\begin{align}\tag{1}\label{eq1}
+	$\begin{align}\tag{1}\label{eq1}
 	x^n + y^n = z^n
 	\end{align}
-	$$
+	$
 	
 	Call again equation $\eqref{eq1}$.
-	~~~
 
 The above renders to:
 
-	$$
-	\begin{align}\tag{1}\label{eq1}
-	x^n + y^n = z^n
-	\end{align}
-	$$
-
-	Call again equation $\eqref{eq1}$.
-
-You don't need an enviroment `align` or `equation` to use `\label`, you can use it with `$$` only, for example,
-
-	~~~ latex
-	$$
-	x^n + y^n = z^n \tag{1}\label{eq1}
-	$$
-	
-	Call again equation $\eqref{eq1}$.
-	~~~
+$\begin{align}\tag{1}\label{eq1}x^n + y^n = z^n\end{align}$
+Call again equation $\eqref{eq1}$.
 
 
 ## Boxes
